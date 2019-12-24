@@ -1,0 +1,18 @@
+syntax = "proto3";
+package Account;
+
+message GetAccountRequest {
+  string id = 1;
+}
+
+message AccountResponse {
+  string id = 1;
+  double balance = 2;
+}
+
+service AccountService {
+
+  rpc fooFn(GetAccountRequest) returns (AccountResponse) {};
+  rpc barFn(GetAccountRequest) returns (GetAccountRequest) {};
+
+}
