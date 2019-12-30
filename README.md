@@ -13,6 +13,18 @@ This generates a `src/app.gen.js` with the implementations of Protobuf messages 
 
 We define a handler map in `src/api.ts`, which is used in `src/server.ts`. The latter contains GRPC boilerplate that should not need be touched.
 
+You can run the toy server application with
+
+```
+$ ts-node src/server.ts
+```
+
 # Client
 
 `src/client-grpc.ts` has GRPC boilerplate set up code, and is used in `src/client.ts` where client method implementations wrap the underlying GRPC calls.
+
+You can run the toy client application with the command below. This will make a single request to the server, print the result, and exit.
+
+```
+$ ts-node src/client.ts
+```
